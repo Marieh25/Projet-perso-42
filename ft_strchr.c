@@ -6,26 +6,27 @@
 /*   By: mhumbert <mhumbert@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/07 11:58:20 by mhumbert          #+#    #+#             */
-/*   Updated: 2025/11/07 14:41:41 by mhumbert         ###   ########.fr       */
+/*   Updated: 2025/11/11 13:37:05 by mhumbert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <strings.h>
-#include <stdio.h>
+
+#include "libft.h"
 
 char	*ft_strchr(const char *s, int c)
 {
-	while(*s != '\0')
+	while (*s != '\0')
 	{
-		if(*s == ((char) c))
-			return((char *)s);
+		if (*s == ((char) c))
+			return ((char *)s);
 		s++;
 	}
-	if(c == '\0')
+	if (c == '\0')
 		return ((char *)s++);
 	return ((char *)s);
-	return NULL;
+	return (NULL);
 }
-
+/*
+#include <stdio.h>
 int	main(void)
 {
 	int	a = 's';
@@ -35,4 +36,4 @@ int	main(void)
 	st = ft_strchr(str, a);
 	printf("%s\n", st);
 
-}
+}*/

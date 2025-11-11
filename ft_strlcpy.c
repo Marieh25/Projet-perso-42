@@ -6,18 +6,15 @@
 /*   By: mhumbert <mhumbert@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/06 13:48:00 by mhumbert          #+#    #+#             */
-/*   Updated: 2025/11/10 11:11:23 by mhumbert         ###   ########.fr       */
+/*   Updated: 2025/11/11 13:32:47 by mhumbert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <stdlib.h>
-#include <stdio.h>
-#include <strings.h>
-size_t	ft_strlen(char *str);
-void	*ft_memcpy(void	*dest, const void *src, size_t n);
+
+#include "libft.h"
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 {
-	size_t src_len;
+	size_t	src_len;
 
 	src_len = ft_strlen(src);
 	if (src_len + 1 <= size)
@@ -31,7 +28,8 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 	}
 	return (src_len);
 }
-
+/*
+#include <stdio.h>
 int	main (void)
 {
 	char	src[] = "How are you";
@@ -40,4 +38,4 @@ int	main (void)
 	ft_strlcpy(dest, src, 15);
 	printf("%s\n", dest);
 	free(dest);
-}
+}*/

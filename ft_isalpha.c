@@ -6,11 +6,11 @@
 /*   By: mhumbert <mhumbert@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/03 17:41:20 by mhumbert          #+#    #+#             */
-/*   Updated: 2025/11/04 14:22:12 by mhumbert         ###   ########.fr       */
+/*   Updated: 2025/11/10 20:00:20 by mhumbert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
 
 int	ft_isalpha(int c)
 {
@@ -19,10 +19,11 @@ int	ft_isalpha(int c)
 	else
 		return (1);
 }
-
+/*
+#include <stdio.h>
 int main(void)
 {
 	printf("%d", ft_isalpha('d'));
 	printf("%d", ft_isalpha(8));
 	printf("%d", ft_isalpha('F'));
-}
+}*/

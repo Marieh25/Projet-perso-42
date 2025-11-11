@@ -6,34 +6,34 @@
 /*   By: mhumbert <mhumbert@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/08 13:26:10 by mhumbert          #+#    #+#             */
-/*   Updated: 2025/11/10 16:55:45 by mhumbert         ###   ########.fr       */
+/*   Updated: 2025/11/11 13:55:13 by mhumbert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *ft_strnstr(const char *big, const char *little, size_t len)
+char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
-	int	i;
-	size_t len_little;
-	
+	int		i;
+	size_t	len_little;
+
 	i = 0;
 	len_little = ft_strlen(little);
-	if(len_little == 0)
+	if (len_little == 0)
 		return ((char *)big);
-	if(len == 0)
+	if (len == 0)
 		return (NULL);
-	while(i <= (len - len_little) && big[i] != '\0')
+	while (i <= (len - len_little) && big[i] != '\0')
 	{
-		if(ft_strncmp(big + i, little, len_little) == 0)
-		{				
-			return((char *)big + i);
+		if (ft_strncmp(big + i, little, len_little) == 0)
+		{
+			return ((char *)big + i);
 		}
 		i++;
-	}                          
+	}
 	return (NULL);
 }
-
+/*
 #include <bsd/string.h>
 #include <stdio.h>
 int main(void)
@@ -43,4 +43,4 @@ int main(void)
 	printf("%s\n", strnstr(s1, s2, 8));
 	printf("%s\n", ft_strnstr(s1, s2, 8));
 	return (0);
-}
+}*/

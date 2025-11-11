@@ -6,13 +6,11 @@
 /*   By: mhumbert <mhumbert@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/06 14:55:42 by mhumbert          #+#    #+#             */
-/*   Updated: 2025/11/06 20:39:51 by mhumbert         ###   ########.fr       */
+/*   Updated: 2025/11/11 13:33:54 by mhumbert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <strings.h>
-#include <stdio.h>
-#include <stdlib.h>
-size_t	ft_strlen(char *str);
+
+#include "libft.h"
 
 size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
@@ -21,8 +19,8 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	size_t	i;
 
 	i = 0;
-	src_len = ft_strlen((char*) src);
-	dst_len = ft_strlen((char*) dst);
+	src_len = ft_strlen((char *) src);
+	dst_len = ft_strlen((char *) dst);
 	if (dst_len >= size)
 		return (src_len + size);
 	else
@@ -36,7 +34,8 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	}
 	return (src_len + dst_len);
 }
-
+/*
+#include <stdio.h>
 int	main(void)
 {
 	char	dst[] = "Hello";
@@ -44,5 +43,4 @@ int	main(void)
 	printf("%s\n%s\n", dst, src);
 	ft_strlcat(dst, src, 15);
 	printf("%s\n", dst);
-}
- 
+}*/
