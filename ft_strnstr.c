@@ -6,7 +6,7 @@
 /*   By: mhumbert <mhumbert@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/08 13:26:10 by mhumbert          #+#    #+#             */
-/*   Updated: 2025/11/11 13:55:13 by mhumbert         ###   ########.fr       */
+/*   Updated: 2025/11/11 15:10:02 by mhumbert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
-	int		i;
+	size_t		i;
 	size_t	len_little;
 
 	i = 0;
@@ -38,7 +38,7 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 #include <stdio.h>
 int main(void)
 {
-	char s1[] = "hello world";
+	char s1[] = "wello world";
 	char s2[] = "wo";
 	printf("%s\n", strnstr(s1, s2, 8));
 	printf("%s\n", ft_strnstr(s1, s2, 8));

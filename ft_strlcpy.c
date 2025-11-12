@@ -6,7 +6,7 @@
 /*   By: mhumbert <mhumbert@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/06 13:48:00 by mhumbert          #+#    #+#             */
-/*   Updated: 2025/11/11 13:32:47 by mhumbert         ###   ########.fr       */
+/*   Updated: 2025/11/11 14:28:37 by mhumbert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,12 +19,12 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 	src_len = ft_strlen(src);
 	if (src_len + 1 <= size)
 	{
-		ft_memcpy (dest, src, src_len + 1);
+		ft_memcpy (dst, src, src_len + 1);
 	}
 	else if (size != 0)
 	{
-		ft_memcpy (dest, src, size - 1);
-		dest [size - 1] = '\0';
+		ft_memcpy (dst, src, size - 1);
+		dst [size - 1] = '\0';
 	}
 	return (src_len);
 }
