@@ -1,39 +1,44 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memchr.c                                        :+:      :+:    :+:   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mhumbert <mhumbert@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/07 17:29:26 by mhumbert          #+#    #+#             */
-/*   Updated: 2025/11/12 13:20:34 by mhumbert         ###   ########.fr       */
+/*   Created: 2025/11/12 12:38:08 by mhumbert          #+#    #+#             */
+/*   Updated: 2025/11/12 18:12:35 by mhumbert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memchr(const void *s, int c, size_t n)
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	size_t			i;
-	unsigned char	*temp;
+	size_t		i;
+	char		*dest;
 
-	temp = (unsigned char *)s;
+	if (!s)
+		return (NULL);
+	if (start > ft_strlen(s))
+		len = 0;
+	else if (len > ft_strlen(s + start))
+		len = ft_strlen(s + start);
+	dest = malloc((len + 1) * sizeof(char));
+	if (!dest)
+		return (NULL);
 	i = 0;
-	while (i < n)
+	while (i < len)
 	{
-		if (temp[i] == (unsigned char)c)
-			return (&temp[i]);
+		dest[i] = s[start + i];
 		i++;
 	}
-	return (NULL);
+	dest[i] = '\0';
+	return (dest);
 }
 /*
 #include <stdio.h>
 int	main(void)
 {
-	char s[] = "Hello";
-	char *st;
-	printf("%s\n", s);
-	ft_memchr(st, 1, 6);
-	printf("%s\n", st);
+	char	src[] = "tripouille";
+	printf("%s\n", ft_substr(src, 100, 1));
 }*/

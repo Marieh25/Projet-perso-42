@@ -6,7 +6,7 @@
 /*   By: mhumbert <mhumbert@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/06 14:55:42 by mhumbert          #+#    #+#             */
-/*   Updated: 2025/11/11 20:49:39 by mhumbert         ###   ########.fr       */
+/*   Updated: 2025/11/12 11:19:55 by mhumbert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	size_t	src_len;
 	size_t	dst_len;
 	size_t	i;
-	
+
 	src_len = ft_strlen(src);
 	dst_len = ft_strlen(dst);
 	if (dst_len >= size)

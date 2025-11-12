@@ -1,39 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memchr.c                                        :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mhumbert <mhumbert@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/07 17:29:26 by mhumbert          #+#    #+#             */
-/*   Updated: 2025/11/12 13:20:34 by mhumbert         ###   ########.fr       */
+/*   Created: 2025/11/12 17:15:40 by mhumbert          #+#    #+#             */
+/*   Updated: 2025/11/12 18:39:45 by mhumbert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memchr(const void *s, int c, size_t n)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
-	size_t			i;
-	unsigned char	*temp;
+	int		size_s1;
+	int		size_s2;
+	char	*temp;
 
-	temp = (unsigned char *)s;
-	i = 0;
-	while (i < n)
-	{
-		if (temp[i] == (unsigned char)c)
-			return (&temp[i]);
-		i++;
-	}
-	return (NULL);
+	size_s1 = ft_strlen(s1);
+	size_s2 = ft_strlen(s2);
+	temp = malloc ((size_s1 + size_s2 + 1) * sizeof(char));
+	if(!temp)
+		return (NULL);
+	ft_memcpy(temp, s1, size_s1);
+	ft_memcpy(&temp[size_s1], s2, size_s2 + 1);
+	return (temp);
 }
 /*
 #include <stdio.h>
 int	main(void)
 {
-	char s[] = "Hello";
-	char *st;
-	printf("%s\n", s);
-	ft_memchr(st, 1, 6);
-	printf("%s\n", st);
+	char s1[] = "tripouille";
+	char s2[] = "42";
+	printf("%s\n", ft_strjoin(s1, s2));
 }*/

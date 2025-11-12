@@ -6,7 +6,7 @@
 /*   By: mhumbert <mhumbert@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/07 11:58:20 by mhumbert          #+#    #+#             */
-/*   Updated: 2025/11/11 18:57:47 by mhumbert         ###   ########.fr       */
+/*   Updated: 2025/11/12 11:19:13 by mhumbert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,9 @@ char	*ft_strchr(const char *s, int c)
 {
 	while (*s)
 	{
-			if (*s == (char)c)
-				return ((char *)s);
-			s++;
+		if (*s == (char)c)
+			return ((char *)s);
+		s++;
 	}
 	if ((char)c == '\0')
 		return ((char *)s);

@@ -6,16 +6,16 @@
 /*   By: mhumbert <mhumbert@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/10 17:06:43 by mhumbert          #+#    #+#             */
-/*   Updated: 2025/11/11 21:15:59 by mhumbert         ###   ########.fr       */
+/*   Updated: 2025/11/12 11:14:14 by mhumbert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
- 
+
 void	*ft_calloc(size_t nmemb, size_t size)
 {
 	unsigned char	*temp;
-	
+
 	if (nmemb > __SIZE_MAX__ / size)
 		return (NULL);
 	temp = malloc(nmemb * size);
