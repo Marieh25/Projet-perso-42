@@ -1,44 +1,54 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_substr.c                                        :+:      :+:    :+:   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mhumbert <mhumbert@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/12 12:38:08 by mhumbert          #+#    #+#             */
-/*   Updated: 2025/11/12 19:52:03 by mhumbert         ###   ########.fr       */
+/*   Created: 2025/11/15 15:39:46 by mhumbert          #+#    #+#             */
+/*   Updated: 2025/11/15 17:26:37 by mhumbert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-char	*ft_substr(char const *s, unsigned int start, size_t len)
+/*
+char	toupper_test(unsigned int i, char c)
 {
-	size_t		i;
-	char		*dest;
+	(void)i;
+	if (c >= 'a' && c <= 'z')
+		c = c - 32;
+	return (c);
+}*/
 
-	if (!s)
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
+{
+	int		i;
+	int		s_len;
+	char	*tab;
+
+	if (!s || !f)
 		return (NULL);
-	if (start > ft_strlen(s))
-		len = 0;
-	else if (len > ft_strlen(s + start))
-		len = ft_strlen(s + start);
-	dest = malloc((len + 1) * sizeof(char));
-	if (!dest)
+	s_len = ft_strlen(s);
+	tab = malloc((s_len + 1) * sizeof(char));
+	if (!tab)
 		return (NULL);
 	i = 0;
-	while (i < len)
+	while (s[i])
 	{
-		dest[i] = s[start + i];
+		tab[i] = f(i, s[i]);
 		i++;
 	}
-	dest[i] = '\0';
-	return (dest);
+	tab[i] = '\0';
+	return (tab);
 }
 /*
 #include <stdio.h>
 int	main(void)
 {
-	char	src[] = "How are you";
-	printf("%s\n", ft_substr(src, 4, 4));
+	const char	s[] = "How are you";
+	char	*u;
+
+	u = ft_strmapi(s, toupper_test);
+	printf("%s\n", u);
+	free(u);
 }*/

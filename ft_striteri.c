@@ -1,44 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_substr.c                                        :+:      :+:    :+:   */
+/*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mhumbert <mhumbert@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/12 12:38:08 by mhumbert          #+#    #+#             */
-/*   Updated: 2025/11/12 19:52:03 by mhumbert         ###   ########.fr       */
+/*   Created: 2025/11/15 16:45:08 by mhumbert          #+#    #+#             */
+/*   Updated: 2025/11/15 17:33:10 by mhumbert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_substr(char const *s, unsigned int start, size_t len)
+/*static void	toupper_test(unsigned int i, char *c)
 {
-	size_t		i;
-	char		*dest;
+	(void)i;
+	if (*c >= 'a' && *c <= 'z')
+		*c = *c - 32;
+}*/
 
-	if (!s)
-		return (NULL);
-	if (start > ft_strlen(s))
-		len = 0;
-	else if (len > ft_strlen(s + start))
-		len = ft_strlen(s + start);
-	dest = malloc((len + 1) * sizeof(char));
-	if (!dest)
-		return (NULL);
+void	ft_striteri(char *s, void (*f)(unsigned int, char *))
+{
+	int	i;
+
+	if (!s || !f)
+		return ;
 	i = 0;
-	while (i < len)
+	while (s[i])
 	{
-		dest[i] = s[start + i];
+		f(i, &s[i]);
 		i++;
 	}
-	dest[i] = '\0';
-	return (dest);
 }
 /*
 #include <stdio.h>
-int	main(void)
+int main(void)
 {
-	char	src[] = "How are you";
-	printf("%s\n", ft_substr(src, 4, 4));
+	char  s[] = "How are you";
+	ft_striteri(s, toupper_test);
+	printf("%s\n", s);
 }*/
