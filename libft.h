@@ -6,7 +6,7 @@
 /*   By: mhumbert <mhumbert@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/10 10:56:48 by mhumbert          #+#    #+#             */
-/*   Updated: 2025/11/17 12:17:21 by mhumbert         ###   ########.fr       */
+/*   Updated: 2025/11/17 15:48:14 by mhumbert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,5 +49,12 @@ void	ft_putchar_fd(char c, int fd);
 void	ft_putstr_fd(char *s, int fd);
 void	ft_putendl_fd(char *s, int fd);
 void	ft_putnbr_fd(int n, int fd);
+
+typedef	s_list
+{
+	void			*content;
+	struc s_list	*next;
+					t_list;
+}
 
 #endif
