@@ -6,7 +6,7 @@
 /*   By: mhumbert <mhumbert@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/12 17:15:40 by mhumbert          #+#    #+#             */
-/*   Updated: 2025/11/13 15:09:24 by mhumbert         ###   ########.fr       */
+/*   Updated: 2025/11/17 13:22:07 by mhumbert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	int		size_s2;
 	char	*temp;
 
+	if (!s1 || !s2 || (!s1 && !s2))
+		return (NULL);
 	size_s1 = ft_strlen(s1);
 	size_s2 = ft_strlen(s2);
 	temp = malloc ((size_s1 + size_s2 + 1) * sizeof(char));

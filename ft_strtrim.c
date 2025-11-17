@@ -6,7 +6,7 @@
 /*   By: mhumbert <mhumbert@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/12 19:39:11 by mhumbert          #+#    #+#             */
-/*   Updated: 2025/11/13 14:45:16 by mhumbert         ###   ########.fr       */
+/*   Updated: 2025/11/17 13:18:22 by mhumbert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,8 @@ char	*ft_strtrim(char const *s1, char const *set)
 	int		end;
 	char	*dest;
 
+	if (!s1 || !set)
+		return (NULL);
 	s1_len = ft_strlen(s1);
 	set_len = ft_strlen(set);
 	start = 0;
@@ -49,7 +51,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 #include <stdio.h>
 int	main(void)
 {
-	char	s1[] = "uyaeuyuyuyyuuyeayyu";
+	char	s1[] = "uyaehuyuyuyyuuyehayyu";
 	char	set[] = "uyae";
 
 	printf("%s\n", ft_strtrim(s1, set));

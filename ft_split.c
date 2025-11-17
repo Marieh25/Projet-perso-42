@@ -6,7 +6,7 @@
 /*   By: mhumbert <mhumbert@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/13 16:53:18 by mhumbert          #+#    #+#             */
-/*   Updated: 2025/11/14 12:38:45 by mhumbert         ###   ########.fr       */
+/*   Updated: 2025/11/17 13:24:43 by mhumbert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,6 +68,8 @@ char	**ft_split(char const *s, char c)
 	int		wordcount;
 	char	**words_tab;
 
+	if (!s)
+		return (NULL);
 	wordcount = count_words(s, c);
 	words_tab = malloc((wordcount + 1) * sizeof(char *));
 	if (!words_tab)
