@@ -1,3 +1,16 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    Makefile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: mhumbert <mhumbert@learner.42.tech>        +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2025/11/17 12:14:07 by mhumbert          #+#    #+#              #
+#    Updated: 2025/11/17 12:14:13 by mhumbert         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
+
 NAME = libft.a
 CC = gcc
 CFLAGS = -Wall -Wextra -Werror
@@ -30,7 +43,11 @@ SRC =	ft_isalpha.c \
 		ft_split.c \
 		ft_itoa.c \
 		ft_strmapi.c \
-		ft_striteri.c
+		ft_striteri.c \
+		ft_putchar_fd.c \
+		ft_putstr_fd.c \
+		ft_putendl_fd.c \
+		ft_putnbr_fd.c
 
 OFILES = $(SRC:.c=.o) 
 all:$(NAME)
