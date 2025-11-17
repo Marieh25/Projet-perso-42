@@ -6,7 +6,7 @@
 /*   By: mhumbert <mhumbert@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/08 13:26:10 by mhumbert          #+#    #+#             */
-/*   Updated: 2025/11/17 11:53:10 by mhumbert         ###   ########.fr       */
+/*   Updated: 2025/11/17 14:25:10 by mhumbert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,11 +19,13 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	size_t	len_big;
 
 	i = 0;
+	if (*little == '\0')
+		return ((char *)big);
+	if (*big == '\0')
+		return (0);
 	len_little = ft_strlen(little);
 	len_big = ft_strlen(big);
-	if (little == NULL || *little == '\0')
-		return ((char *)big);
-	else if (big == NULL || len_little > len)
+	if (len_little > len)
 		return (NULL);
 	while (i <= (len - len_little) && i <= len_big - len_little)
 	{
@@ -41,8 +43,8 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 #include <stdio.h>
 int main(void)
 {
-	char s1[] = "wello world";
-	char s2[] = "lo";
-	printf("%s\n", ft_strnstr(s1, s2, 6));
+	char s1[] = "";
+	char s2[] = "coucou";
+	printf("%p\n", ft_strnstr(s1, s2, -1));
 	return (0);
 }*/
