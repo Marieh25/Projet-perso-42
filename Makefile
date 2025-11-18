@@ -6,7 +6,7 @@
 #    By: mhumbert <mhumbert@learner.42.tech>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/11/17 12:14:07 by mhumbert          #+#    #+#              #
-#    Updated: 2025/11/17 12:14:13 by mhumbert         ###   ########.fr        #
+#    Updated: 2025/11/18 17:41:01 by mhumbert         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -47,7 +47,14 @@ SRC =	ft_isalpha.c \
 		ft_putchar_fd.c \
 		ft_putstr_fd.c \
 		ft_putendl_fd.c \
-		ft_putnbr_fd.c
+		ft_putnbr_fd.c \
+		ft_lstnew.c \
+		ft_lstadd_front.c \
+		ft_lstsize.c \
+		ft_lstlast.c \
+		ft_lstadd_back.c \
+		ft_lstdelone.c \
+		ft_lstclear.c
 
 OFILES = $(SRC:.c=.o) 
 all:$(NAME)
