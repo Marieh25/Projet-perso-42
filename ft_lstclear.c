@@ -6,7 +6,7 @@
 /*   By: mhumbert <mhumbert@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/18 17:18:54 by mhumbert          #+#    #+#             */
-/*   Updated: 2025/11/18 17:57:12 by mhumbert         ###   ########.fr       */
+/*   Updated: 2025/11/18 19:01:12 by mhumbert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,11 +18,11 @@ void	ft_lstclear(t_list **lst, void (*del)(void *))
 
 	if (!lst || !del)
 		return ;
-	while (*lst != NULL)
+	while (*lst)
 	{
 		tmp = (*lst)-> next;
-		del((*lst)-> content);
-		free((*lst));
-		(*lst) = tmp;
+		ft_lstdelone(*lst, del);
+		*lst = tmp;
 	}
+	free(*lst);
 }

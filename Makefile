@@ -6,7 +6,7 @@
 #    By: mhumbert <mhumbert@learner.42.tech>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/11/17 12:14:07 by mhumbert          #+#    #+#              #
-#    Updated: 2025/11/18 17:41:01 by mhumbert         ###   ########.fr        #
+#    Updated: 2025/11/19 13:42:38 by mhumbert         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -54,7 +54,9 @@ SRC =	ft_isalpha.c \
 		ft_lstlast.c \
 		ft_lstadd_back.c \
 		ft_lstdelone.c \
-		ft_lstclear.c
+		ft_lstclear.c \
+		ft_lstiter.c \
+		ft_lstmap.c
 
 OFILES = $(SRC:.c=.o) 
 all:$(NAME)
