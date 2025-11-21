@@ -6,7 +6,7 @@
 /*   By: mhumbert <mhumbert@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/07 17:29:26 by mhumbert          #+#    #+#             */
-/*   Updated: 2025/11/12 13:20:34 by mhumbert         ###   ########.fr       */
+/*   Updated: 2025/11/21 12:21:29 by mhumbert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,8 +32,6 @@ void	*ft_memchr(const void *s, int c, size_t n)
 int	main(void)
 {
 	char s[] = "Hello";
-	char *st;
 	printf("%s\n", s);
-	ft_memchr(st, 1, 6);
-	printf("%s\n", st);
+	printf("%p\n", ft_memchr(s, 'l', 2));
 }*/
