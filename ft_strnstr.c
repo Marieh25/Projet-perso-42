@@ -6,7 +6,7 @@
 /*   By: mhumbert <mhumbert@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/08 13:26:10 by mhumbert          #+#    #+#             */
-/*   Updated: 2025/11/17 14:25:10 by mhumbert         ###   ########.fr       */
+/*   Updated: 2025/11/19 17:40:11 by mhumbert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,8 +43,8 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 #include <stdio.h>
 int main(void)
 {
-	char s1[] = "";
-	char s2[] = "coucou";
-	printf("%p\n", ft_strnstr(s1, s2, -1));
+	char s1[] = "coucou";
+	char s2[] = "cou";
+	printf("%p\n", ft_strnstr(s1, s2, 3));
 	return (0);
 }*/

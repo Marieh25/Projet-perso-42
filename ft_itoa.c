@@ -6,7 +6,7 @@
 /*   By: mhumbert <mhumbert@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/14 13:57:48 by mhumbert          #+#    #+#             */
-/*   Updated: 2025/11/15 13:55:48 by mhumbert         ###   ########.fr       */
+/*   Updated: 2025/11/19 16:36:44 by mhumbert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,6 +65,5 @@ int	main(void)
 {
 	int	c = -2147483648;
 	char *str = ft_itoa(c);
-
 	printf("%s", str);
 }*/
