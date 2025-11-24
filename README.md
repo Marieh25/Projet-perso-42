@@ -1,6 +1,8 @@
-_This project has been created as part of the 42 curriculum by Marie Humbert._
+_This project has been created as part of the 42 curriculum by mhumbert._
 
 ## Description :
+
+The goal of this project was to learn the classics functions of the C language, initiating the bases of algorithmy.
 
 - ft_atoi.c : The atoi() function converts the initial portion of the string pointed to by nptr to int.
 
@@ -80,8 +82,18 @@ _This project has been created as part of the 42 curriculum by Marie Humbert._
 
 - ft_toupper : This function converts lowercase letters to uppercase.
 
-Intructions :
+## Intructions :
 
-Makefile
+compilation : GCC
 
-Resources :
+flags : -Wall -Wextra -Werror
+
+## Resources :
+
+- My classmates
+
+- The man
+
+- [Koor](https://koor.fr/C/Tutorial/Instructions.wp)
+
+- [42-cursus](https://42-cursus.gitbook.io/guide)
