@@ -6,7 +6,7 @@
 /*   By: mhumbert <mhumbert@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/05 15:43:22 by mhumbert          #+#    #+#             */
-/*   Updated: 2025/11/11 13:31:26 by mhumbert         ###   ########.fr       */
+/*   Updated: 2025/11/21 17:24:17 by mhumbert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,12 +35,12 @@ void	*ft_memmove(void *dest, const void *scr, size_t n)
 	return (dest);
 }
 /*
-#include <stio.h>
+#include <stdio.h>
 int	main(void)
 {
-	char	scr[] = "Hello world";
-	char	*dest = scr + 2;
-	printf("%s\n %s\n", scr, dest);
-	ft_memmove(dest, scr, 5);
+	char	scr[] = "How are you";
+	char	*dest = scr + 5;
+	ft_memmove(dest, scr, 3);
 	printf("%s\n", dest);
-}*/
+}
+*/
