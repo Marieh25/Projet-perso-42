@@ -88,11 +88,21 @@ compilation : GCC
 
 flags : -Wall -Wextra -Werror
 
+make : compilation of the library
+
+make clean : delete all the objects files
+
+make fclean : delete all the objects files and the library
+
+make re : delete all the objects files, the library and then recompile the library
+
 ## Resources :
 
 - My classmates
 
 - The man
+
+- testers : libfterator (blaeste), libftTester (Tripouille), Libftest (jtoty)
 
 - [Koor](https://koor.fr/C/Tutorial/Instructions.wp)
 
