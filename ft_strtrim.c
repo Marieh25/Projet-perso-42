@@ -6,13 +6,13 @@
 /*   By: mhumbert <mhumbert@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/12 19:39:11 by mhumbert          #+#    #+#             */
-/*   Updated: 2025/11/17 13:18:22 by mhumbert         ###   ########.fr       */
+/*   Updated: 2025/11/26 12:07:55 by mhumbert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_settrim(const char *set, char c, int set_len)
+static int	ft_settrim(const char *set, char c, int set_len)
 {
 	int	index;
 

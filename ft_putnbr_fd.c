@@ -6,18 +6,13 @@
 /*   By: mhumbert <mhumbert@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/15 18:36:12 by mhumbert          #+#    #+#             */
-/*   Updated: 2025/11/15 19:06:43 by mhumbert         ###   ########.fr       */
+/*   Updated: 2025/11/26 11:58:42 by mhumbert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putchar_fd(char c, int fd)
-{
-	write(fd, &c, 1);
-}
-
-void	put_num(int n, int fd)
+static void	put_num(int n, int fd)
 {
 	if (n <= -10)
 	{
